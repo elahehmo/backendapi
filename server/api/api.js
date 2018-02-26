@@ -4,5 +4,6 @@ var router = require('express').Router();
 // for all our resources
 router.use('/date', require('./date/timeStampRoutes'));
 router.use('/whoami', require('./whoami/whoamiRoutes'));
+router.use('/url', require('./urlshortener/urlShortenerRoutes'));
 
 module.exports = router;
