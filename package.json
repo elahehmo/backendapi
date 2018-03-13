@@ -16,11 +16,14 @@
   "dependencies": {
     "body-parser": "^1.13.2",
     "colors": "^1.1.2",
+    "dotenv": "^5.0.1",
     "express": "^4.13.1",
     "express-useragent": "^1.0.12",
     "goo.gl": "^0.1.4",
     "lodash": "^3.10.0",
-    "morgan": "^1.6.1"
+    "mongoose": "^5.0.9",
+    "morgan": "^1.6.1",
+    "qwant-api": "^0.3.0"
   },
   "devDependencies": {
     "chai": "^3.2.0",

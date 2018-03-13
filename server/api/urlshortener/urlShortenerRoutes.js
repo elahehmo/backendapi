@@ -1,6 +1,7 @@
 var router = require('express').Router();
 var logger = require('../../util/logger');
 var googl = require('goo.gl');
+
 //using googl.gl package to shorten url
 router.route('/:url(*)')
   .get(function(req, res){
@@ -15,17 +16,19 @@ if(regex.test(urlparam)===true){
   _url.original_url=urlparam;  
 
 
-  googl.setKey('');
+  googl.setKey(process.env.google_api);
  
   // Get currently set developer key 
-  googl.getKey();
+  var goo=googl.getKey();
+  console.log(goo);
    
   // Shorten a long url and output the result 
  googl.shorten(urlparam)
       .then(function (shortUrl) {
+        console.log(urlparam);
           console.log("short url:"+shortUrl);
         
-          //_url.short_url= "<!DOCTYPE html><html><head></head><body><a target=\"_blank\" href=\"+shortUrl+\">shortUrl</a></body></html>";
+          //_url.short_url= "<!DOCTYPE html><html><head></head><body><a target=\"_blank\" href="+shortUrl+">"+shortUrl+"</a></body></html>";
           _url.short_url=shortUrl;
          
           res.send(JSON.stringify(_url));
