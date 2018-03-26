@@ -29,7 +29,13 @@ User Story: I can get the image URLs, alt text and page urls for a set of images
 User Story: I can paginate through the responses by adding a ?offset=2 parameter to the URL. 
 User Story: I can get a list of the most recently submitted search strings. 
 ### example=http://localhost:3000/api/image/imagesearch/lolcats%20funny?offset=5
-###  example=http://localhost:3000/api/image/latestsearch
+### example=http://localhost:3000/api/image/latestsearch
          
          
+## File Metadata Microservice </h2>
 
+User Story: I can submit a FormData object that includes a file upload.
+User Story: When I submit something, I will receive the file size in bytes within the JSON response </p> 
+### example=http://localhost:3000/api/getfilesize
+         
+      

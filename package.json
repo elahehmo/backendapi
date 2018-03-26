@@ -23,6 +23,7 @@
     "lodash": "^3.10.0",
     "mongoose": "^5.0.9",
     "morgan": "^1.6.1",
+    "multer": "^1.3.0",
     "qwant-api": "^0.3.0"
   },
   "devDependencies": {
